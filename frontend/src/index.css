@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html, body, #root {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+      "Apple Color Emoji", "Segoe UI Emoji";
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(0,0,0,0.18);
+  }
+
+  :focus-visible {
+    outline: 3px solid rgba(17, 17, 17, 0.35);
+    outline-offset: 2px;
+    border-radius: 12px;
+  }
+}
+
+@layer components {
+  .btn-premium {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2
+      font-semibold text-white bg-flamengoBlack shadow-md
+      transition duration-200 active:scale-[0.98] hover:opacity-95;
+  }
+}
